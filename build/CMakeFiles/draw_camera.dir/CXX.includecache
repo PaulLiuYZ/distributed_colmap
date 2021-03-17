@@ -7,20 +7,22 @@
 #IncludeRegexTransform: 
 
 /home/lyzlinux/Desktop/colmap/src/experiment/draw_camera.cpp
-base/reconstruction.h
-/home/lyzlinux/Desktop/colmap/src/experiment/base/reconstruction.h
-unordered_map
--
-Eigen/Core
--
-base/point3d.h
-/home/lyzlinux/Desktop/colmap/src/experiment/base/point3d.h
 base/image.h
 /home/lyzlinux/Desktop/colmap/src/experiment/base/image.h
 base/camera.h
 /home/lyzlinux/Desktop/colmap/src/experiment/base/camera.h
+base/point3d.h
+/home/lyzlinux/Desktop/colmap/src/experiment/base/point3d.h
+Eigen/Core
+-
+vector
+-
 util/ply.h
 /home/lyzlinux/Desktop/colmap/src/experiment/util/ply.h
+base/reconstruction.h
+/home/lyzlinux/Desktop/colmap/src/experiment/base/reconstruction.h
+unordered_map
+-
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

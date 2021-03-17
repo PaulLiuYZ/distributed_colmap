@@ -19,50 +19,51 @@ Eigen::Vector3f imagecenter(const Image& image){
 int main()
 {
     int branching =4;
+    std::unordered_map<image_t,Point3D> imageplace;
     for(int i=0;i<branching;i++)
     {
         Reconstruction reconstruction1;
-        switch(i)
+       switch(i)
         {   
-            case 1:
+            case 0:
             reconstruction1.ReadText("/home/lyzlinux/Desktop/experiment/ex6/split/re1/");
             break;
-            case 2:
+            case 1:
             reconstruction1.ReadText("/home/lyzlinux/Desktop/experiment/ex6/split/re2/");
             break;
-            case 3:
+            case 2:
             reconstruction1.ReadText("/home/lyzlinux/Desktop/experiment/ex6/split/re3/");
             break;
-            case 4:
+            case 3:
             reconstruction1.ReadText("/home/lyzlinux/Desktop/experiment/ex6/split/re4/");
             break;
         }
         int r,g,b;
-        if(i=0)
-           {
+       if(i==0)
+          {
                r=255;
-               g=0;
+               g=255;
                b=0;
            }
-        if(i=1)
+        if(i==1)
            {
                r=0;
                g=255;
                b=0;
            }
-        if(i=2)
+        if(i==2)
            {
                r=0;
                g=0;
                b=255;
            }
-        if(i=3)
+        if(i==3)
            {
                r=255;
-               g=255;
+               g=0;
                b=0;
            }
-           std::unordered_map<image_t,Point3D> imageplace;
+           //std::unordered_map<image_t,Point3D> imageplace;
         for(const auto& image1 : reconstruction1.Images())
         {
             Point3D point3D1;
@@ -78,6 +79,7 @@ int main()
             point3D1.SetColor(color1);
             imageplace.emplace(image1.first,point3D1);
         }
+    }
         std::vector<PlyPoint> ply_points;
         ply_points.reserve(imageplace.size());
 
@@ -94,23 +96,23 @@ int main()
         const bool kWriteNormal = false;
         const bool kWriteRGB = true;
         const std::string& path1="/home/lyzlinux/Desktop/experiment/ply/1.ply";
-        const std::string& path2="/home/lyzlinux/Desktop/experiment/ply/2.ply";
-        const std::string& path3="/home/lyzlinux/Desktop/experiment/ply/3.ply";
-        const std::string& path4="/home/lyzlinux/Desktop/experiment/ply/4.ply";
-        switch(i){
-            case 1:
+        // const std::string& path2="/home/lyzlinux/Desktop/experiment/ply/2.ply";
+        // const std::string& path3="/home/lyzlinux/Desktop/experiment/ply/3.ply";
+        // const std::string& path4="/home/lyzlinux/Desktop/experiment/ply/4.ply";
+        // switch(i){
+        //     case 0:
             WriteBinaryPlyPoints(path1, ply_points, kWriteNormal, kWriteRGB);
-            break;
-            case 2:
-            WriteBinaryPlyPoints(path2, ply_points, kWriteNormal, kWriteRGB);
-            break;
-            case 3:
-            WriteBinaryPlyPoints(path3, ply_points, kWriteNormal, kWriteRGB);
-            break;
-            case 4:
-            WriteBinaryPlyPoints(path4, ply_points, kWriteNormal, kWriteRGB);
-            break;
-        }
-    }
+        //     break;
+        //     case 1:
+        //     WriteBinaryPlyPoints(path1, ply_points, kWriteNormal, kWriteRGB);
+        //     break;
+        //     case 2:
+        //     WriteBinaryPlyPoints(path1, ply_points, kWriteNormal, kWriteRGB);
+        //     break;
+        //     case 3:
+        //     WriteBinaryPlyPoints(path1, ply_points, kWriteNormal, kWriteRGB);
+        //     break;
+        // }
+    //  }
 }
 
