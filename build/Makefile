@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named draw_camera
+# Target rules for targets named connect
 
 # Build rule for target.
-draw_camera: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 draw_camera
-.PHONY : draw_camera
+connect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 connect
+.PHONY : connect
 
 # fast build rule for target.
-draw_camera/fast:
-	$(MAKE) -f CMakeFiles/draw_camera.dir/build.make CMakeFiles/draw_camera.dir/build
-.PHONY : draw_camera/fast
+connect/fast:
+	$(MAKE) -f CMakeFiles/connect.dir/build.make CMakeFiles/connect.dir/build
+.PHONY : connect/fast
 
-draw_camera.o: draw_camera.cpp.o
+connect.o: connect.cpp.o
 
-.PHONY : draw_camera.o
+.PHONY : connect.o
 
 # target to build an object file
-draw_camera.cpp.o:
-	$(MAKE) -f CMakeFiles/draw_camera.dir/build.make CMakeFiles/draw_camera.dir/draw_camera.cpp.o
-.PHONY : draw_camera.cpp.o
+connect.cpp.o:
+	$(MAKE) -f CMakeFiles/connect.dir/build.make CMakeFiles/connect.dir/connect.cpp.o
+.PHONY : connect.cpp.o
 
-draw_camera.i: draw_camera.cpp.i
+connect.i: connect.cpp.i
 
-.PHONY : draw_camera.i
+.PHONY : connect.i
 
 # target to preprocess a source file
-draw_camera.cpp.i:
-	$(MAKE) -f CMakeFiles/draw_camera.dir/build.make CMakeFiles/draw_camera.dir/draw_camera.cpp.i
-.PHONY : draw_camera.cpp.i
+connect.cpp.i:
+	$(MAKE) -f CMakeFiles/connect.dir/build.make CMakeFiles/connect.dir/connect.cpp.i
+.PHONY : connect.cpp.i
 
-draw_camera.s: draw_camera.cpp.s
+connect.s: connect.cpp.s
 
-.PHONY : draw_camera.s
+.PHONY : connect.s
 
 # target to generate assembly for a file
-draw_camera.cpp.s:
-	$(MAKE) -f CMakeFiles/draw_camera.dir/build.make CMakeFiles/draw_camera.dir/draw_camera.cpp.s
-.PHONY : draw_camera.cpp.s
+connect.cpp.s:
+	$(MAKE) -f CMakeFiles/connect.dir/build.make CMakeFiles/connect.dir/connect.cpp.s
+.PHONY : connect.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... draw_camera"
+	@echo "... connect"
 	@echo "... edit_cache"
-	@echo "... draw_camera.o"
-	@echo "... draw_camera.i"
-	@echo "... draw_camera.s"
+	@echo "... connect.o"
+	@echo "... connect.i"
+	@echo "... connect.s"
 .PHONY : help
 
 

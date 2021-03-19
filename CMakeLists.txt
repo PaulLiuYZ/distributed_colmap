@@ -124,5 +124,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 include_directories(${COLMAP_INCLUDE_DIRS})
 link_directories(${COLMAP_LINK_DIRS})
 
-add_executable(draw_camera draw_camera.cpp)
-target_link_libraries(draw_camera ${COLMAP_LIBRARIES})
+add_executable(connect connect.cpp)
+target_link_libraries(connect ${COLMAP_LIBRARIES})
